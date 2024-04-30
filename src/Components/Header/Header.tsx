@@ -11,7 +11,18 @@ export const Header = () => {
         <hr className="bg-black mb-5" />
         <div className="flex justify-between">
           <p className="text-dark-grayish-blue font-semibold">Dark Mode</p>
-          <input type="checkbox" name="darkmode" id="darkmode" />
+          <label
+            htmlFor="darkmode"
+            className="border bg-toggle w-12 h-6 rounded-full cursor-pointer p-[2px]"
+          >
+            <input
+              type="checkbox"
+              name="darkmode"
+              id="darkmode"
+              className="sr-only peer" //sr-only
+            />
+            <div className="bg-light-grayish-blue w-[18px] h-[18px] rounded-full peer-checked:translate-x-6 transition-all"></div>
+          </label>
         </div>
       </header>
     </>

@@ -12,7 +12,7 @@ export default {
         "primary-lime-green": "hsl(163, 72%, 41%)",
         "primary-bright-red": "hsl(356, 69%, 56%)",
         // Theme
-        "light-theme": "hsl(230, 22%, 74%)",
+        toggle: "hsl(230, 22%, 74%)",
         "dark-theme-gradient1": "hsl(210, 78%, 56%)",
         "dark-theme-gradient2": "hsl(146, 68%, 55%)",
         "very-dark-blue": "hsl(230, 17%, 14%)",

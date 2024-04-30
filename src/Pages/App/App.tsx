@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function App() {
+export const App = () => {
   return (
     <React.Fragment>
       <h1 className="text-3xl font-bold text-red-700 underline">
@@ -8,6 +8,4 @@ function App() {
       </h1>
     </React.Fragment>
   );
-}
-
-export default App;
+};

@@ -13,7 +13,7 @@ export interface Overview {
   network: networks;
   user: string;
   audienceType: string;
-  audience: number;
+  audience: string;
   today: number;
   isUp: boolean;
 }

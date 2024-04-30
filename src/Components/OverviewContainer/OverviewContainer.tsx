@@ -134,11 +134,26 @@ const data: Root = {
 };
 
 export const OverviewContainer = () => {
+  const convertNumberToK = (n: number) => {
+    if (n > 10000) return n / 1000 + "k";
+    return n.toString();
+  };
+
   return (
     <section className="absolute top-[191px] left-0 right-0">
       {data.overview.map((item) => {
-        const itemData: Overview = { ...item };
-        return <OverviewCard key={item.id} {...itemData} />;
+        return (
+          <OverviewCard
+            key={item.id}
+            user={item.user}
+            audienceType={item.audienceType}
+            audience={convertNumberToK(item.audience)}
+            isUp={item.isUp}
+            network={item.network}
+            today={item.today}
+            id={""}
+          />
+        );
       })}
     </section>
   );

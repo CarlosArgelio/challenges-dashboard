@@ -1,11 +1,10 @@
 import * as React from "react";
+import { Header } from "./../../Components";
 
 export const App = () => {
   return (
     <React.Fragment>
-      <h1 className="text-3xl font-bold text-red-700 underline">
-        Hello world!
-      </h1>
+      <Header />
     </React.Fragment>
   );
 };

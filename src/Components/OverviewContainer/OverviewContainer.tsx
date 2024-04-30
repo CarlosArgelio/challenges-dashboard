@@ -140,7 +140,7 @@ const convertNumberToK = (n: number) => {
 
 export const OverviewContainer = () => {
   return (
-    <section className="absolute top-[191px] left-0 right-0">
+    <section className="max-w-[1440px] flex flex-wrap absolute top-[191px] left-0 right-0 mx-auto">
       {data.overview.map((item) => {
         return (
           <OverviewCard
@@ -162,22 +162,24 @@ export const OverviewContainer = () => {
 export const OverviewTodayContainer = () => {
   return (
     <div>
-      <p className="text-light-grayish-blue text-2xl font-bold ml-6 mb-4">
+      <p className="text-very-dark-blue dark:text-light-grayish-blue text-2xl font-bold ml-6 mb-4">
         Overview - Today
       </p>
-      {data["overview-today"].map((item) => {
-        return (
-          <OverviewTodayCard
-            key={item.id}
-            isUp={item.isUp}
-            network={item.network}
-            statsType={item.statsType}
-            stats={convertNumberToK(item.stats)}
-            porcentage={item.porcentage}
-            id={item.id}
-          />
-        );
-      })}
+      <div className="flex flex-wrap gap-1">
+        {data["overview-today"].map((item) => {
+          return (
+            <OverviewTodayCard
+              key={item.id}
+              isUp={item.isUp}
+              network={item.network}
+              statsType={item.statsType}
+              stats={convertNumberToK(item.stats)}
+              porcentage={item.porcentage}
+              id={item.id}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

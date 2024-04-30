@@ -1,4 +1,4 @@
-import { OverviewCard } from "./../.";
+import { OverviewCard, OverviewTodayCard } from "./../.";
 
 export type networks = "facebook" | "instagram" | "twitter" | "youtube";
 
@@ -19,7 +19,7 @@ export interface Overview {
 
 export interface OverviewToday {
   id: string;
-  network: string;
+  network: networks;
   statsType: string;
   stats: number;
   porcentage: number;
@@ -133,12 +133,12 @@ const data: Root = {
   ],
 };
 
-export const OverviewContainer = () => {
-  const convertNumberToK = (n: number) => {
-    if (n > 10000) return n / 1000 + "k";
-    return n.toString();
-  };
+const convertNumberToK = (n: number) => {
+  if (n > 10000) return n / 1000 + "k";
+  return n.toString();
+};
 
+export const OverviewContainer = () => {
   return (
     <section className="absolute top-[191px] left-0 right-0">
       {data.overview.map((item) => {
@@ -156,5 +156,28 @@ export const OverviewContainer = () => {
         );
       })}
     </section>
+  );
+};
+
+export const OverviewTodayContainer = () => {
+  return (
+    <div>
+      <p className="text-light-grayish-blue text-2xl font-bold ml-6 mb-4">
+        Overview - Today
+      </p>
+      {data["overview-today"].map((item) => {
+        return (
+          <OverviewTodayCard
+            key={item.id}
+            isUp={item.isUp}
+            network={item.network}
+            statsType={item.statsType}
+            stats={convertNumberToK(item.stats)}
+            porcentage={item.porcentage}
+            id={item.id}
+          />
+        );
+      })}
+    </div>
   );
 };

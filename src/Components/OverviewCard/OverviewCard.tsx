@@ -34,17 +34,17 @@ const networkColort = {
 
 export const OverviewCard = (item: Overview) => {
   return (
-    <article className="bg-light-grayish-blue w-[326px] h-[216px] mb-4 rounded-[5px] mx-auto overflow-hidden text-center">
+    <article className="bg-light-grayish-blue w-[326px] h-[216px] mb-4 rounded-[5px] mx-auto overflow-hidden text-center hover:brightness-95 cursor-pointer dark:bg-dark-desaturated-blue hover:dark:brightness-125">
       <div className={`${networkColort[`${item.network}`]} h-1 mb-8`} />
       <div className="flex items-center place-content-center gap-2 mx-auto">
         <img
           src={networkLogos[`${item.network}`]}
           alt={`logo ${item.network}`}
         />
-        <p className="text-x text-dark-grayish-blue font-bold">{item.user}</p>
+        <p className="text-xs text-dark-grayish-blue font-bold">{item.user}</p>
       </div>
 
-      <p className="text-[56px] font-bold text-very-dark-blue">
+      <p className="text-[56px] font-bold text-very-dark-blue dark:text-white">
         {item.audience}
       </p>
       <p className="uppercase tracking-[5px] text-dark-grayish-blue text-xs mb-6">

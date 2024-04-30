@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -13,8 +14,6 @@ export default {
         "primary-bright-red": "hsl(356, 69%, 56%)",
         // Theme
         toggle: "hsl(230, 22%, 74%)",
-        "dark-theme-gradient1": "hsl(210, 78%, 56%)",
-        "dark-theme-gradient2": "hsl(146, 68%, 55%)",
         "very-dark-blue": "hsl(230, 17%, 14%)",
         "very-dark-blue-top": "hsl(232, 19%, 15%)",
         "dark-desaturated-blue": "hsl(228, 28%, 20%)",
@@ -26,9 +25,13 @@ export default {
         // RRSS
         facebook: "hsl(208, 92%, 53%)",
         "twitter-old": "hsl(203, 89%, 53%)",
-        "instagram-gradient1": "hsl(37, 97%, 70%)",
-        "instagram-gradient2": "hsl(329, 70%, 58%)",
         youtube: "hsl(348, 97%, 39%)",
+      },
+      backgroundImage: {
+        "toggle-gradient":
+          "linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%))",
+        "instagram-gradient":
+          "linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)",
       },
       fontFamily: {
         Inter: ["Inter"],

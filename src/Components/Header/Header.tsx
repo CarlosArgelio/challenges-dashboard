@@ -31,7 +31,7 @@ export const Header = () => {
           </p>
           <label
             htmlFor="darkmode"
-            className="border relative bg-toggle w-12 h-6 rounded-full cursor-pointer p-[2px]"
+            className="border border-toggle dark:border-bg-toggle-gradient relative bg-toggle w-12 h-6 rounded-full cursor-pointer p-[2px]"
           >
             <input
               onClick={handleDarkMode}
